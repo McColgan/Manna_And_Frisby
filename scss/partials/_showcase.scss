@@ -1,0 +1,103 @@
+.showcase_outer{
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    max-height: 1000px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.showcase_img{
+    position: absolute;
+    height: 1059px;
+    width: 100vw;
+    background-image: url(../images/showcase.jpeg);
+    background-size: cover;
+    background-position: top -200px center;
+    background-repeat: no-repeat;
+}
+.logo_outer{
+    //top: 60px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(30, 30, 73, 0.8);
+    width: 50%;
+    height: 100%;
+    padding: 0;
+    .logo{
+        position: relative;
+        font-size: 7em;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $color-white;
+        &::before{
+            content: '';
+            position: absolute;
+            height: 10px;
+            width: 40%;
+            left: -0.9em;
+            top: 0.5em;
+            background: $color-white;
+            transform: rotate(-90deg);
+        }
+    }
+    .logo_name{
+        font-size: 3em;
+        font-weight: 500;
+        color: $color-white;
+    }
+
+}
+.showcase_quote_box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(243, 243, 243, 0.3);
+    }
+    .showcase_quote{
+        position: relative;
+        padding: 0;
+        margin: 0;
+        font-size: 4em;
+        color: $primary-color;
+        text-align: center;
+        max-width: 400px;
+        z-index: 1;
+    }
+    .showcase_cta{
+        color: $primary-color;
+        z-index: 1;
+        margin-top: 1em;
+        font-size: 1.4em;
+        border: 3px solid $primary-color;
+        padding: 0.5em 1em;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 250ms ease-in-out;
+        &:hover{
+            background: $primary-color;
+            color: $color-white;
+            //font-weight: 500;
+        }
+    }
+}
