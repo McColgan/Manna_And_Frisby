@@ -1,0 +1,6 @@
+# Logs
+logs
+*.log
+
+# Dependancy directory for node_modules
+node_modules
