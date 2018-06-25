@@ -1,0 +1,68 @@
+.services{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    background: $primary-color;
+    position: relative;
+    padding: 3em 0 0 0;
+    color: $color-white;
+    h1{
+        font-size: $section-header;
+        margin: 0 auto;
+        padding: 1em 0;
+        text-align: center;
+        font-weight: 500;
+    }
+    .services_flexbox{
+        width: 100%;
+        max-width: 1200px;
+        height: auto;
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+        flex-wrap: wrap;
+        //flex-direction: row;
+        .service{
+            width: 50%;
+            height: 400px;
+            padding: 0;
+            box-sizing: border-box;
+            //margin: 1em;
+            background-image: url(../images/showcase.jpg);
+            background-size: cover;
+            background-position: top 3em center;
+            border: 5px solid #f3f3f3;
+            h2{
+                font-size: 1.5em;
+                font-weight: 500;
+                text-align: center;
+                background: $primary-color;
+                padding: 1em 0;
+                margin: 0;
+            }
+        }
+        .rendering{
+            background-image: url(../images/rendering.jpg);
+        }
+        .drives{
+            background-image: url(../images/resin.jpg);
+        }
+        .roofing{
+            background-image: url(../images/roofing.png);
+        }
+        .cladding{
+            background-image: url(../images/cladding.jpg);
+        }
+        .lanterns{
+            background-image: url(../images/lanterns.jpg);
+            background-position: top -50px center
+        }
+        .building{
+            background-image: url(../images/building.jpg);
+            background-position: top -55px center
+        }
+    }
+}

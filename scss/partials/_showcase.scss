@@ -26,7 +26,7 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.3);
     }
 }
 .logo_outer{
@@ -36,7 +36,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: rgb(38, 38, 94);
+    background: rgba(38, 38, 94, 1);
     width: 50%;
     height: 100%;
     padding: 0;
@@ -53,6 +53,7 @@
         text-transform: uppercase;
         color: $color-white;
         margin-left: 0.5em;
+        margin-top: 0em;
         &::before{
             content: '';
             position: absolute;
@@ -93,7 +94,7 @@
         text-align: center;
         max-width: 400px;
         z-index: 1;
-        font-weight: 600;
+        font-weight: 700;
         text-align: right;
     }
     .showcase_cta{

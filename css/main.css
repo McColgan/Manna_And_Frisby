@@ -285,7 +285,7 @@ html, body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.2); }
+    background: rgba(255, 255, 255, 0.3); }
 
 .logo_outer {
   position: relative;
@@ -305,7 +305,8 @@ html, body {
     font-weight: 300;
     text-transform: uppercase;
     color: #f3f3f3;
-    margin-left: 0.5em; }
+    margin-left: 0.5em;
+    margin-top: 0em; }
     .logo_outer .logo_primo::before {
       content: '';
       position: absolute;
@@ -341,7 +342,7 @@ html, body {
     text-align: center;
     max-width: 400px;
     z-index: 1;
-    font-weight: 600;
+    font-weight: 700;
     text-align: right; }
   .showcase_quote_box .showcase_cta {
     color: #26265E;
@@ -362,7 +363,135 @@ html, body {
 .about {
   position: relative;
   width: 100%;
-  height: 800px; }
+  height: 800px;
+  background: #f3f3f3;
+  color: #26265E;
+  padding: 2em 0;
+  margin: 0; }
+  .about h1 {
+    font-size: 3em;
+    font-weight: 600;
+    text-align: center; }
+  .about p {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 10%;
+    font-size: 1.2em; }
+
+.contact {
+  width: 100%;
+  height: 500px;
+  background: #f3f3f3;
+  position: relative;
+  padding: 3em 0;
+  margin: 0;
+  color: #26265E; }
+  .contact h1 {
+    font-size: 3em;
+    text-align: center;
+    font-weight: 600;
+    margin: 0;
+    padding: 0.5em 0; }
+  .contact h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 3em 20%; }
+  .contact .contact_outer {
+    height: 200px;
+    width: 90%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; }
+    .contact .contact_outer .contact_box {
+      width: 30%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center; }
+      .contact .contact_outer .contact_box .contact_icon {
+        width: 80px;
+        height: 80px;
+        background-image: url(../images/mail_icon_1.png);
+        background-size: 80px 80px;
+        background-position: center;
+        transition: 250ms ease-in-out; }
+      .contact .contact_outer .contact_box p {
+        font-size: 1.3em;
+        font-weight: 600;
+        text-align: center; }
+      .contact .contact_outer .contact_box .email_icon {
+        background-image: url(../images/mail_icon_1.png); }
+        .contact .contact_outer .contact_box .email_icon:hover, .contact .contact_outer .contact_box .email_icon:active, .contact .contact_outer .contact_box .email_icon:focus {
+          background-image: url(../images/mail_icon_2.png); }
+      .contact .contact_outer .contact_box .tel_icon {
+        background-image: url(../images/tel_icon_1.png); }
+        .contact .contact_outer .contact_box .tel_icon:hover, .contact .contact_outer .contact_box .tel_icon:active, .contact .contact_outer .contact_box .tel_icon:focus {
+          background-image: url(../images/tel_icon_2.png); }
+      .contact .contact_outer .contact_box .location_icon {
+        background-image: url(../images/location_icon_1.png); }
+        .contact .contact_outer .contact_box .location_icon:hover, .contact .contact_outer .contact_box .location_icon:active, .contact .contact_outer .contact_box .location_icon:focus {
+          background-image: url(../images/location_icon_2.png); }
+
+.services {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  background: #26265E;
+  position: relative;
+  padding: 3em 0 0 0;
+  color: #f3f3f3; }
+  .services h1 {
+    font-size: 3em;
+    margin: 0 auto;
+    padding: 1em 0;
+    text-align: center;
+    font-weight: 500; }
+  .services .services_flexbox {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap; }
+    .services .services_flexbox .service {
+      width: 50%;
+      height: 400px;
+      padding: 0;
+      box-sizing: border-box;
+      background-image: url(../images/showcase.jpg);
+      background-size: cover;
+      background-position: top 3em center;
+      border: 5px solid #f3f3f3; }
+      .services .services_flexbox .service h2 {
+        font-size: 1.5em;
+        font-weight: 500;
+        text-align: center;
+        background: #26265E;
+        padding: 1em 0;
+        margin: 0; }
+    .services .services_flexbox .rendering {
+      background-image: url(../images/rendering.jpg); }
+    .services .services_flexbox .drives {
+      background-image: url(../images/resin.jpg); }
+    .services .services_flexbox .roofing {
+      background-image: url(../images/roofing.png); }
+    .services .services_flexbox .cladding {
+      background-image: url(../images/cladding.jpg); }
+    .services .services_flexbox .lanterns {
+      background-image: url(../images/lanterns.jpg);
+      background-position: top -50px center; }
+    .services .services_flexbox .building {
+      background-image: url(../images/building.jpg);
+      background-position: top -55px center; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
