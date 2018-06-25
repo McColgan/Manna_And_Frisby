@@ -14,10 +14,20 @@
     position: absolute;
     height: 1059px;
     width: 100vw;
-    background-image: url(../images/showcase.jpeg);
+    background-image: url(../images/showcase.jpg);
     background-size: cover;
     background-position: top -200px center;
     background-repeat: no-repeat;
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.2);
+    }
 }
 .logo_outer{
     //top: 60px;
@@ -26,16 +36,23 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: rgba(30, 30, 73, 0.8);
+    background: rgb(38, 38, 94);
     width: 50%;
     height: 100%;
     padding: 0;
-    .logo{
+    //-webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 55%, 80% 55%, 80% 45%, 100% 45%, 100% 0%);
+    //clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 55%, 80% 55%, 80% 45%, 100% 45%, 100% 0%);
+    -webkit-clip-path: polygon(0 0, 0 100%, 60% 100%, 60% 70%, 100% 70%, 100% 40%, 30% 0);
+    clip-path: polygon(0 0, 0 100%, 60% 100%, 60% 70%, 100% 70%, 100% 40%, 30% 0);
+
+
+    .logo_primo{
         position: relative;
         font-size: 7em;
         font-weight: 300;
         text-transform: uppercase;
         color: $color-white;
+        margin-left: 0.5em;
         &::before{
             content: '';
             position: absolute;
@@ -47,11 +64,15 @@
             transform: rotate(-90deg);
         }
     }
-    .logo_name{
-        font-size: 3em;
+    .logo_facade{
+        margin-top: -2em;
+        margin-left: 2em;
+        font-size: 2em;
         font-weight: 500;
         color: $color-white;
+        letter-spacing: 0.8em;
     }
+    
 
 }
 .showcase_quote_box{
@@ -63,16 +84,6 @@
     margin: 0;
     justify-content: center;
     align-items: center;
-    &::before{
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: rgba(243, 243, 243, 0.3);
-    }
     .showcase_quote{
         position: relative;
         padding: 0;
@@ -82,6 +93,8 @@
         text-align: center;
         max-width: 400px;
         z-index: 1;
+        font-weight: 600;
+        text-align: right;
     }
     .showcase_cta{
         color: $primary-color;
@@ -93,7 +106,8 @@
         cursor: pointer;
         text-decoration: none;
         font-weight: 600;
-        transition: 250ms ease-in-out;
+        transition: 150ms ease-in-out;
+        margin-left: 7.5em;
         &:hover{
             background: $primary-color;
             color: $color-white;

@@ -6,7 +6,7 @@ html, body {
   margin: 0;
   width: 100%;
   height: auto;
-  background-color: #f3f3f3;
+  background-color: #26265E;
   color: #202020;
   font-family: 'Montserrat', sans-serif; }
 
@@ -273,10 +273,19 @@ html, body {
   position: absolute;
   height: 1059px;
   width: 100vw;
-  background-image: url(../images/showcase.jpeg);
+  background-image: url(../images/showcase.jpg);
   background-size: cover;
   background-position: top -200px center;
   background-repeat: no-repeat; }
+  .showcase_img::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.2); }
 
 .logo_outer {
   position: relative;
@@ -284,17 +293,20 @@ html, body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: rgba(30, 30, 73, 0.8);
+  background: #26265e;
   width: 50%;
   height: 100%;
-  padding: 0; }
-  .logo_outer .logo {
+  padding: 0;
+  -webkit-clip-path: polygon(0 0, 0 100%, 60% 100%, 60% 70%, 100% 70%, 100% 40%, 30% 0);
+  clip-path: polygon(0 0, 0 100%, 60% 100%, 60% 70%, 100% 70%, 100% 40%, 30% 0); }
+  .logo_outer .logo_primo {
     position: relative;
     font-size: 7em;
     font-weight: 300;
     text-transform: uppercase;
-    color: #f3f3f3; }
-    .logo_outer .logo::before {
+    color: #f3f3f3;
+    margin-left: 0.5em; }
+    .logo_outer .logo_primo::before {
       content: '';
       position: absolute;
       height: 10px;
@@ -303,10 +315,13 @@ html, body {
       top: 0.5em;
       background: #f3f3f3;
       transform: rotate(-90deg); }
-  .logo_outer .logo_name {
-    font-size: 3em;
+  .logo_outer .logo_facade {
+    margin-top: -2em;
+    margin-left: 2em;
+    font-size: 2em;
     font-weight: 500;
-    color: #f3f3f3; }
+    color: #f3f3f3;
+    letter-spacing: 0.8em; }
 
 .showcase_quote_box {
   position: relative;
@@ -317,15 +332,6 @@ html, body {
   margin: 0;
   justify-content: center;
   align-items: center; }
-  .showcase_quote_box::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(243, 243, 243, 0.3); }
   .showcase_quote_box .showcase_quote {
     position: relative;
     padding: 0;
@@ -334,7 +340,9 @@ html, body {
     color: #26265E;
     text-align: center;
     max-width: 400px;
-    z-index: 1; }
+    z-index: 1;
+    font-weight: 600;
+    text-align: right; }
   .showcase_quote_box .showcase_cta {
     color: #26265E;
     z-index: 1;
@@ -345,7 +353,8 @@ html, body {
     cursor: pointer;
     text-decoration: none;
     font-weight: 600;
-    transition: 250ms ease-in-out; }
+    transition: 150ms ease-in-out;
+    margin-left: 7.5em; }
     .showcase_quote_box .showcase_cta:hover {
       background: #26265E;
       color: #f3f3f3; }
