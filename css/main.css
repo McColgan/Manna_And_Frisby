@@ -285,7 +285,7 @@ html, body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.3); }
+    background: rgba(255, 255, 255, 0.2); }
 
 .logo_outer {
   position: relative;
@@ -453,8 +453,8 @@ html, body {
     text-align: center;
     font-weight: 500; }
   .services .services_flexbox {
-    width: 100%;
-    max-width: 1200px;
+    width: 90%;
+    max-width: 1000px;
     height: auto;
     padding: 0;
     margin: 0 auto;
@@ -463,19 +463,22 @@ html, body {
     align-items: stretch;
     flex-wrap: wrap; }
     .services .services_flexbox .service {
-      width: 50%;
-      height: 400px;
+      width: 100%;
+      height: auto;
       padding: 0;
+      margin: 1em 0;
       box-sizing: border-box;
       overflow: hidden;
       position: relative;
-      border: 5px solid #f3f3f3; }
+      display: flex;
+      flex-direction: row;
+      border-radius: 5px; }
       .services .services_flexbox .service .service_bg {
-        width: 100%;
+        width: 60%;
         height: 100%;
         position: relative;
         background-size: cover;
-        background-position: top center;
+        background-position: center;
         background-repeat: no-repeat;
         transition: 300ms ease-in-out; }
         .services .services_flexbox .service .service_bg:hover,
@@ -487,18 +490,41 @@ html, body {
           content: '';
           height: 100%;
           width: 100%; }
-      .services .services_flexbox .service h2 {
-        position: absolute;
+      .services .services_flexbox .service .service_text {
+        position: relatives;
         height: auto;
-        width: 100%;
+        width: 40%;
+        height: 100%;
         top: 0;
-        font-size: 1.5em;
-        font-weight: 500;
-        text-align: center;
-        background: #26265E;
+        background: #f3f3f3;
         padding: 1em 0;
         margin: 0;
-        z-index: 1; }
+        color: #26265E;
+        z-index: 1;
+        box-shadow: inset 0px 0px 10px 3px rgba(0, 0, 0, 0.5);
+        box-sizing: border-box; }
+        .services .services_flexbox .service .service_text h2 {
+          font-size: 1.5em;
+          font-weight: 700;
+          text-align: center;
+          padding: 0.5em 1em;
+          margin: 0;
+          color: #26265E; }
+        .services .services_flexbox .service .service_text li {
+          text-align: center;
+          font-size: 1em;
+          font-weight: 500;
+          padding: 1em;
+          margin: 0 auto; }
+    .services .services_flexbox .flex_end {
+      flex-flow: row-reverse; }
+    .services .services_flexbox .line_break {
+      position: relative;
+      height: 1px;
+      width: 80%;
+      margin: 0 auto;
+      padding: 0;
+      background: #26265E; }
     .services .services_flexbox .rendering {
       background-image: url(../images/rendering.jpg); }
     .services .services_flexbox .drives {
@@ -511,6 +537,13 @@ html, body {
       background-image: url(../images/lanterns.jpg); }
     .services .services_flexbox .building {
       background-image: url(../images/building.jpg); }
+
+.our_work {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background: skyblue;
+  height: 600px; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
