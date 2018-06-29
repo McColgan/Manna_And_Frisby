@@ -16,13 +16,39 @@ $(document).ready(function(){
         return false;
     });
 
+     // Smooth Scrolling
+     var scrollLink = $('.scroll');
+     scrollLink.click(function(e){
+         e.preventDefault();
+         $('body,html').animate({
+         scrollTop: $(this.hash).offset().top - $('.header_outer').outerHeight()
+         }, 1500);
+     });
+ 
+     // Link switching 
+     function linkSwitching(){
+         var scrollBarLocation = $(this).scrollTop();
+         scrollLink.each(function(){
+           var sectionOffset = $(this.hash).offset().top -140;
+           if (sectionOffset <= scrollBarLocation){
+             $(this).parent().addClass('active_link');
+             $(this).parent().siblings().removeClass('active_link');
+           }
+         });
+     }
+
+    // Parallax function 
     function parallax(){
         var wScroll = $(window).scrollTop();
             $('.showcase_img').css('top',(wScroll * 0.04)+'em');
+            $('.logo_outer').css('top',(wScroll * 0.05)+'em');
+            //$('.showcase_quote_box').css('top',(wScroll * 0.09)+'em');
         }
+
+    // Calling functions    
     $(window).scroll(function(){
         parallax();
-        //linkSwitching();
+        linkSwitching();
     });
 
 });
