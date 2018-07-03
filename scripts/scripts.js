@@ -40,8 +40,8 @@ $(document).ready(function(){
     // Parallax function 
     function parallax(){
         var wScroll = $(window).scrollTop();
-            $('.showcase_img').css('top',(wScroll * 0.04)+'em');
-            $('.logo_outer').css('top',(wScroll * 0.05)+'em');
+            $('.showcase_img').css('top',(wScroll * 0.03)+'em');
+            $('.logo_outer').css('top',(wScroll * 0.09)+'em');
             //$('.showcase_quote_box').css('top',(wScroll * 0.09)+'em');
         }
 

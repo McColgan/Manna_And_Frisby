@@ -45,7 +45,7 @@ body {
   margin: 0 auto 0 5%;
   padding: 0;
   width: 90%;
-  background: #26265e;
+  background: rgba(68, 68, 68, 0.96);
   height: 70px;
   z-index: 100;
   position: fixed; }
@@ -58,7 +58,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: auto;
-  height: 65px;
+  height: 95px;
   margin: 0;
   padding: 0;
   left: 1em; }
@@ -143,26 +143,26 @@ body {
 
 @media (min-width: 800px) {
   .header_outer {
-    background: #26265e;
     height: 100px; }
   .nav_outer {
     position: relative;
-    margin: 0 auto;
+    margin: 0;
     height: 100px;
     width: 100%; }
     .nav_outer ul {
       height: 100%;
       flex-direction: row;
-      margin: 0 auto;
+      margin: 0 1em 0 0;
       background: none;
-      justify-content: space-around;
-      max-width: 550px;
+      float: right;
+      max-width: 500px;
       padding: 0; }
       .nav_outer ul li a {
         opacity: 1;
         padding: 0;
         height: 100%;
-        font-size: 0.9em;
+        font-size: 0.8em;
+        font-weight: 200;
         width: 100%;
         margin: 0; }
         .nav_outer ul li a:hover {
@@ -250,6 +250,7 @@ body {
   bottom: 3em;
   background: #26265e;
   width: 90%;
+  max-width: 1400px;
   height: 11em;
   font-family: 'Montserrat', sans-serif;
   color: #f3f3f3;
@@ -272,19 +273,18 @@ body {
   position: relative;
   top: 100px;
   width: 90%;
+  max-width: 1400px;
   padding: 0;
   margin: 0 auto;
   height: 100vh;
   max-height: 900px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row; }
+  overflow: hidden; }
 
 .showcase_img {
   position: absolute;
   height: 1059px;
   width: 100vw;
-  background-image: url(../images/showcase.jpg);
+  background-image: url(../images/showcase_2.png);
   background-size: cover;
   background-position: top -200px center;
   background-repeat: no-repeat; }
@@ -296,38 +296,38 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(11, 22, 68, 0.6); }
+    background: rgba(11, 22, 68, 0.4); }
 
 .logo_outer {
-  position: relative;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background: #26265e;
   width: 50%;
-  height: 100%;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  height: 250px;
   padding: 0;
-  margin: -70px 0 0 0;
-  margin-left: -0.5em;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
-  -webkit-clip-path: polygon(0 0, 0 100%, 60% 100%, 60% 70%, 100% 70%, 100% 40%, 30% 0);
-  clip-path: polygon(0 0, 0 100%, 60% 100%, 60% 70%, 100% 70%, 100% 40%, 30% 0); }
+  margin: auto;
+  transform: translateY(-30%); }
   .logo_outer .logo_primo {
-    position: relative;
     font-size: 7em;
     font-weight: 300;
     text-transform: uppercase;
     color: #f3f3f3;
     margin-left: 0.5em;
-    margin-top: 0em; }
+    margin-top: 0.1em;
+    position: relative; }
     .logo_outer .logo_primo::before {
       content: '';
       position: absolute;
-      height: 10px;
-      width: 40%;
-      left: -0.9em;
-      top: 0.5em;
+      height: 6px;
+      width: 190px;
+      left: -1em;
+      bottom: 0.25em;
       background: #f3f3f3;
       transform: rotate(-90deg); }
   .logo_outer .logo_facade {
@@ -343,18 +343,20 @@ body {
   display: flex;
   flex-direction: column;
   width: 50%;
+  float: right;
   padding: 0;
   margin: 0;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  height: 100vh; }
   .showcase_quote_box .showcase_quote {
     position: relative;
     padding: 0;
-    margin: -100px  0 0 0;
-    font-size: 4em;
+    margin: -100px 0 0 0;
+    font-size: 3.5em;
     color: #f3f3f3;
     text-align: center;
-    max-width: 400px;
+    max-width: 350px;
     z-index: 1;
     font-weight: 100;
     text-align: right; }
@@ -369,34 +371,60 @@ body {
     text-decoration: none;
     font-weight: 300;
     transition: 350ms ease-in-out;
-    margin-left: 7.5em;
-    background: #26265e; }
+    margin-left: 6em;
+    background: #26265e;
+    position: relative; }
     .showcase_quote_box .showcase_cta:hover {
       background: #f3f3f3;
       color: #26265e; }
+    .showcase_quote_box .showcase_cta::before {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 5px;
+      width: 50px;
+      right: -3em;
+      bottom: 20px;
+      background: #f3f3f3; }
 
 .about {
   position: relative;
   width: 90%;
+  max-width: 1400px;
   height: 800px;
   background: #f3f3f3;
   color: #26265e;
-  padding: 2em 0;
+  padding: 0;
   margin: 0 auto; }
   .about h1 {
-    font-size: 3em;
-    font-weight: 300;
-    text-align: center; }
+    font-size: 2em;
+    font-weight: 400;
+    text-align: center;
+    background: #26265e;
+    color: #f3f3f3;
+    margin: 0 auto;
+    width: 300px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 200;
+    z-index: 100; }
   .about p {
     text-align: center;
     max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 10%;
+    margin: -0.5em auto 0 auto;
+    padding: 3em 10%;
     font-size: 1.2em;
-    font-weight: 300; }
+    font-weight: 300;
+    background: #dfdfdf;
+    z-index: 0;
+    -webkit-clip-path: polygon(50% 0%, 100% 10%, 100% 100%, 0 100%, 0 10%);
+    clip-path: polygon(50% 0%, 100% 10%, 100% 100%, 0 100%, 0 10%); }
 
 .contact {
   width: 90%;
+  max-width: 1400px;
   height: 500px;
   background: #f3f3f3;
   position: relative;
@@ -404,7 +432,7 @@ body {
   margin: 0 auto;
   color: #26265e; }
   .contact h1 {
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
     font-weight: 200;
     margin: 0;
@@ -456,6 +484,7 @@ body {
 
 .services {
   width: 90%;
+  max-width: 1400px;
   height: auto;
   padding: 0;
   margin: 0 auto;
@@ -464,7 +493,7 @@ body {
   padding: 3em 0 0 0;
   color: #26265e; }
   .services h1 {
-    font-size: 3em;
+    font-size: 2em;
     margin: 0 auto;
     padding: 1em 0;
     text-align: center;
@@ -500,14 +529,14 @@ body {
         background-position: center;
         background-repeat: no-repeat;
         transition: 200ms ease-in-out;
-        transform: scale(1);
+        transform: scale(0.9);
         box-sizing: border-box;
         margin: 0; }
         .services .services_flexbox .service .service_bg:hover,
         .services .services_flexbox .service .service_bg :active,
         .services .services_flexbox .service .service_bg :focus {
-          transform: scale(0.95);
-          box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.75); }
+          transform: scale(1);
+          box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75); }
         .services .services_flexbox .service .service_bg::before {
           position: absolute;
           content: '';
@@ -560,6 +589,7 @@ body {
 
 .our_work {
   width: 90%;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0;
   position: relative;

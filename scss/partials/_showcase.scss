@@ -2,23 +2,19 @@
     position: relative;
     top: 100px;
     width: 90%;
+    max-width: 1400px;
     padding: 0;
     margin: 0 auto;
     height: 100vh;
     max-height: 900px;
     overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    //border: 1px solid #f3f3f3;
-    //border-bottom: none;
-    //box-sizing: border-box;
 }
 
 .showcase_img{
     position: absolute;
     height: 1059px;
     width: 100vw;
-    background-image: url(../images/showcase.jpg);
+    background-image: url(../images/showcase_2.png);
     background-size: cover;
     background-position: top -200px center;
     background-repeat: no-repeat;
@@ -30,44 +26,44 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background: rgba(11, 22, 68, 0.6);
+        background: rgba(11, 22, 68, 0.4);
     }
 }
 .logo_outer{
     //top: 60px;
-    position: relative;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background: $primary-color;
     width: 50%;
-    height: 100%;
+    top: 50%;
+    //right: 0;
+    bottom: 0;
+    left: 0;
+    //max-width: 600px;
+    height: 250px;
     padding: 0;
-    margin: -70px 0 0 0;
-    margin-left: -0.5em;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
-    //-webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 55%, 80% 55%, 80% 45%, 100% 45%, 100% 0%);
-    //clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 55%, 80% 55%, 80% 45%, 100% 45%, 100% 0%);
-    -webkit-clip-path: polygon(0 0, 0 100%, 60% 100%, 60% 70%, 100% 70%, 100% 40%, 30% 0);
-    clip-path: polygon(0 0, 0 100%, 60% 100%, 60% 70%, 100% 70%, 100% 40%, 30% 0);
-
+    margin: auto;
+    transform: translateY(-30%);
+    
 
     .logo_primo{
-        position: relative;
         font-size: 7em;
         font-weight: 300;
         text-transform: uppercase;
         color: $color-white;
         margin-left: 0.5em;
-        margin-top: 0em;
+        margin-top: 0.1em;
+        position: relative;
         &::before{
             content: '';
             position: absolute;
-            height: 10px;
-            width: 40%;
-            left: -0.9em;
-            top: 0.5em;
+            height: 6px;
+            width: 190px;
+            left: -1em;
+            bottom: 0.25em;
             background: $color-white;
             transform: rotate(-90deg);
         }
@@ -84,22 +80,26 @@
 
 }
 .showcase_quote_box{
+    //background: salmon;
     position: relative;
     display: flex;
     flex-direction: column;
     width: 50%;
+    float: right;
     padding: 0;
     margin: 0;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    //box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, 0.8);
     .showcase_quote{
         position: relative;
         padding: 0;
-        margin: -100px  0 0 0;
-        font-size: 4em;
+        margin: -100px 0 0 0;
+        font-size: 3.5em;
         color: $color-white;
         text-align: center;
-        max-width: 400px;
+        max-width: 350px;
         z-index: 1;
         font-weight: 100;
         text-align: right;
@@ -115,12 +115,24 @@
         text-decoration: none;
         font-weight: 300;
         transition: 350ms ease-in-out;
-        margin-left: 7.5em;
+        margin-left: 6em;
         background: $primary-color;
+        position: relative;
         &:hover{
             background: $color-white;
             color: $primary-color;
             //font-weight: 500;
+        }
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            height: 5px;
+            width: 50px;
+            right: -3em;
+            bottom: 20px;
+            background: $color-white;
+            //transform: rotate(-90deg);
         }
     }
 }
