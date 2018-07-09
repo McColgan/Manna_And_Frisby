@@ -125,6 +125,10 @@
     .header_outer{
         //background: $color-grey;
         height: 100px;
+        max-width: 1400px;
+        margin: 0 auto;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .nav_outer{
         position: relative;
